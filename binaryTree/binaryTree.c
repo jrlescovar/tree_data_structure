@@ -1,10 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
-struct Tree{
-	int info;
-	struct Tree *esq, *dir;
-};typedef struct Tree tree;
+#include "tree.h"
 
 void localiza(tree *raiz, int info, tree **no){
 	if(raiz != NULL){
@@ -23,13 +20,7 @@ tree *localizaNo(tree * raiz, int infopai){
 	return no;
 }
 
-tree *criaNo(int info){
-    tree *raiz = (tree *)malloc(sizeof(tree));
-    raiz->info = info;
-    raiz->esq = NULL;
-    raiz->dir = NULL;
-    return raiz;
-}
+
 void insere(tree **raiz, int info, int infopai, char lado){
 	tree *pai;
 	if(*raiz == NULL){
