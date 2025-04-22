@@ -3,9 +3,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
-
 #include "tree.h"
 
+
+// interativo
 void insereABB(tree **raiz, int info){
     tree *aux;
     int flag = 0; //for stop while 

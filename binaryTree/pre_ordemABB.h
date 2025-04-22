@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "tree.h"
 
+//
 void pre_ordemRecursivo(tree *raiz){
     if(raiz != NULL){
         printf("%d\t", raiz->info);
