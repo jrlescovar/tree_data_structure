@@ -1,5 +1,8 @@
-#include "tree.h"   //desnecesseraio esses include, porem coloquei para tirar simbolo de error, mesmo nao sendo execultavel
+#ifndef PRE_ORDEM_ABB_H
+#define PRE_ORDEM_ABB_H
 #include <stdio.h>
+#include "tree.h"
+
 void pre_ordemRecursivo(tree *raiz){
     if(raiz != NULL){
         printf("%d\t", raiz->info);
@@ -29,3 +32,4 @@ void pre_ordemInterativo(tree *raiz) {
     }
     free(p);  // Libera a pilha após o uso
 }
+#endif

@@ -1,3 +1,5 @@
+#ifndef INSERIR_ABB_H
+#define INSERIR_ABB_H
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -58,3 +60,4 @@ void insereABBR(tree **raiz, int info){
             insereABBR(&(*raiz)->dir, info);
     }
 }
+#endif

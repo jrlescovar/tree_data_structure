@@ -1,3 +1,5 @@
+#ifndef TREE_H
+#define TREE_H
 #include <stdlib.h>
 
 struct Tree{
@@ -53,3 +55,5 @@ void pop(pilha **p, tree **raiz) {
         *raiz = NULL;  // Caso a pilha esteja vazia
     }
 }
+
+#endif
