@@ -13,8 +13,6 @@
 
 int main(void){
     tree *raiz = NULL;
-
-
     printf("Arvore Simples para Exibir nos Modos Pre-Pos-In\n\n\n");
     insereABBrecursivo(&raiz, 48);
     insereABBrecursivo(&raiz, 23);
