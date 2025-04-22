@@ -10,7 +10,6 @@ void pos_ordemRecursivo(tree *raiz){
         printf("%d\t", raiz->info);
     }
 }
-
 void pos_ordemInterativo(tree *raiz) {
     pilha *p, *p2;
     init(&p);

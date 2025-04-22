@@ -6,7 +6,6 @@
 #include "pre_ordemABB.h"
 #include "tree.h"
 #include "InserirABB.h"
-
 int main(void)
 {
     tree *raiz = NULL;
