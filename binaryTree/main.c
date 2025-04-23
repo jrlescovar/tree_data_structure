@@ -6,6 +6,7 @@
 #include "pre_ordemABB.h"
 #include "tree.h"
 #include "InserirABB.h"
+#include "buscarABB.h"
 int main(void)
 {
     tree *raiz = NULL;
@@ -16,6 +17,7 @@ int main(void)
         printf("Digite o Numero\n");
         printf("[1] - Inserir na Arvore\n");
         printf("[2] - Exibir a Arvore\n");
+        printf("[3] - Buscar na Arvore\n");
         printf("[0] - SAIR\n");
         printf("Opcao: ");
         scanf("%d", &press);
@@ -52,6 +54,17 @@ int main(void)
             pos_ordemRecursivo(raiz);
             getch();
             break;
+        case 3:
+            printf("Digite um numero para ser Buscado: ");
+            scanf("%d",&ok);
+            tree *resultado;
+            buscaABB(raiz, ok, &resultado);
+            if (resultado != NULL)
+                printf("\nEncontrado: %d\n", resultado->info);
+            else
+                printf("\nNão encontrado\n");
+            getch();
+        break;
         default:
             printf("Opcao Invalida!, tente [1], [2] ou [0]");
             getch();
