@@ -5,15 +5,26 @@
 #include<ctype.h>
 #include "tree.h"
 
-void buscaABB(tree *raiz, int info, tree **aux) {
-    if (raiz == NULL) {
+void buscaABB(tree *raiz, int info, tree **aux){
+    /*if (raiz == NULL) {
         *aux = NULL;
     } else if (raiz->info == info) {
         *aux = raiz;
     } else if (info < raiz->info) {
-        buscaABB(raiz->esq, info, aux);
+        buscaABB(raiz->esq, info, &*aux);
     } else {
-        buscaABB(raiz->dir, info, aux);
+        buscaABB(raiz->dir, info, &*aux);
+    }*/
+    if(raiz != NULL){
+    	if(info == raiz->info){
+    		*aux = raiz;
+    	}else
+    		if(info > raiz->info)
+    			buscaABB(raiz->dir,info,&*aux);
+    		else
+    			buscaABB(raiz->esq,info,&*aux);
+    }else{
+    	*aux = NULL;
     }
 }
 
