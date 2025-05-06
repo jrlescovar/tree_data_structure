@@ -1,6 +1,6 @@
 #ifndef BUSCAR_ABB_H
 #define BUSCAR_ABB_H
-#include<stdio.h>
+#include<stdio.h> //nao precisa disso aqui so para tirar simbolo de erro do meu compilador
 #include<stdlib.h>
 #include<ctype.h>
 #include "tree.h"
@@ -41,6 +41,19 @@ tree *buscaABBInterativo(tree *raiz, int info) {
     return 0;  // se nao encontrar
 }
 
+tree * buscaABBrecursivareturn(tree *raiz, int info){
 
+	if(raiz != NULL){
+		if(info == raiz->info)
+			return raiz;
+		else if(info > raiz->info)
+			buscaABBrecursivareturn(raiz->dir, info);
+		else
+			buscaABBrecursivareturn(raiz->esq, info);
+
+	}else
+		return NULL;
+
+}
 
 #endif

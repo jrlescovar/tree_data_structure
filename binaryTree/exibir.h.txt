@@ -1,0 +1,16 @@
+void exibeTreeGotoxy(tree *raiz, int x, int y,int tam){
+	if(raiz != NULL){
+		gotoxy(x, y);
+		printf("%d",raiz->info);
+		if(raiz->esq != NULL){
+			gotoxy(x-tam/2,y+1);
+			printf("/");
+		}
+		if(raiz->dir != NULL){
+			gotoxy(x+tam/2,y+1);
+			printf("\\");
+		}
+	exibeTreeGotoxy(raiz->esq, x-tam,y+2,tam/2);
+	exibeTreeGotoxy(raiz->dir, x+tam, y+2, tam/2);	
+	}
+}
